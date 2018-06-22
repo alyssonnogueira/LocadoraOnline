@@ -1,0 +1,12 @@
+version: '2'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/home/app/locadora-backend/
+      - /home/app/locadora-backend/node_modules
+    ports:
+      - 3000:8080
+    command: node src/server

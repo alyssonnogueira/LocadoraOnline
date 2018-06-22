@@ -1,0 +1,45 @@
+{
+  "name": "site-academia-backend",
+  "version": "1.0.0",
+  "description": "Backend do site da academia",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "NODE_ENV=prod node src/server",
+    "dev": "NODE_ENV=dev node src/server",
+    "live-dev": "NODE_ENV=dev nodemon src/server",
+    "windows-live-dev": "set NODE_ENV=dev && nodemon src/server",
+    "windows-dev": "set NODE_ENV=dev && node src/server",
+    "test": "NODE_ENV=test node src/server",
+    "migrate": "cd src && ../node_modules/.bin/sequelize db:migrate",
+    "windows-migrate": "cd src && ..\\node_modules\\.bin\\sequelize db:migrate"
+  },
+  "author": "alysson",
+  "license": "ISC",
+  "dependencies": {
+    "activedirectory": "^0.7.2",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "easyimage": "^3.1.0",
+    "express": "^4.16.2",
+    "express-fileupload": "^0.3.0",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.8",
+    "jsonwebtoken": "^8.1.0",
+    "lodash": "^4.17.4",
+    "memory-cache": "^0.2.0",
+    "minio": "^4.0.0",
+    "moment": "^2.19.2",
+    "mysql2": "^1.5.1",
+    "normalize-path": "^2.1.1",
+    "open-graph": "^0.2.3",
+    "pg": "^7.4.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.15.0",
+    "sharp": "^0.18.4",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12",
+    "sequelize-cli": "^3.2.0"
+  }
+}

@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: locadora-backend-dev
+  namespace: alysson
+  labels:
+    k8s-app: locadora-backend-dev
+    version: development
+spec:
+  #type: NodePort
+  selector:
+    k8s-app: locadora-backend-dev
+    version: development
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: tcp-8080

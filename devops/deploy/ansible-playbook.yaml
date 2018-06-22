@@ -1,0 +1,9 @@
+---
+- hosts: k8s
+  remote_user: root
+  tasks:
+  - name: delete localdora-backend replication controller on k8s cluster
+    command: kubectl delete -f /home/devops/projects/alysson/localdora-backend/devops/deploy/k8s-localdora-backend-rc.yaml
+
+  - name: deploy localdora-backend replication controller on k8s cluster
+    command: kubectl apply -f /home/devops/projects/alysson/localdora-backend/devops/deploy/k8s-localdora-backend-rc.yaml

@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: locadora-backend
+  namespace: alysson
+spec:
+  replicas: 1
+  selector:
+    k8s-app: locadora-backend
+    version: master
+  template:
+    metadata:
+      name: locadora-backend
+      labels:
+        k8s-app: locadora-backend
+        version: master
+    spec:
+      containers:
+      - name: locadora-backend
+        image: nexus.alysson.com.br:443/locadora-backend:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          name: tcp-8080
+          protocol: TCP
+        env:
+        - name: NODE_ENV
+          value: prod
+      imagePullSecrets:
+      - name: alysson-regsecret

@@ -1,0 +1,9 @@
+---
+- hosts: k8s
+  remote_user: root
+  tasks:
+  - name: delete locadora-backend-dev replication controller on k8s cluster
+    command: kubectl delete -f /home/devops/projects/alysson/locadora-backend/devops/deploy/k8s-locadora-backend-dev-rc.yaml
+
+  - name: deploy locadora-backend-dev replication controller on k8s cluster
+    command: kubectl apply -f /home/devops/projects/alysson/locadora-backend/devops/deploy/k8s-locadora-backend-dev-rc.yaml

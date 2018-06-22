@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+ name: locadora-backend-dev-ingress
+ namespace: alysson
+spec:
+ rules:
+   - host: k8s-locadora-backend-dev.alysson.com.br
+     http:
+       paths:
+         - path:
+           backend:
+             serviceName: locadora-backend-dev
+             servicePort: 80
