@@ -3,7 +3,7 @@ const Function = require('../models/function');
 const AccessGroupHasFunction = require('../models/access_group_has_function');
 
 exports.index = function(req, res) {
-    res.send('NOT IMPLEMENTED: Access Group Index');
+    res.status(200).send('Running..');
 };
 
 exports.create = function (req, res) {

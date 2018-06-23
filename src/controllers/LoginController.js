@@ -7,7 +7,7 @@ const User = require('../models/user');
 "use strict";
 
 exports.index = function(req, res) {
-    res.send('NOT IMPLEMENTED: Login Index');
+    res.status(200).send('Running..');
 };
 
 exports.signin = function(req, res) {

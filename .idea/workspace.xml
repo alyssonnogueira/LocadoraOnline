@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81507e96-dec5-4447-97f3-92c9b5018f18" name="Default" comment="" />
+    <list default="true" id="81507e96-dec5-4447-97f3-92c9b5018f18" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/seeders/20180531145640-functions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/seeders/20180531145700-access_groups.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/seeders/20180531145723-access_group_has_functions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/seeders/20180531145809-logins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/AccessGroupController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AccessGroupController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/FunctionController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/FunctionController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/LoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/LoginController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/UserController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/user/cover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/user/get.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/user/picture.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/user/put.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/user/route.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/util/opengraph.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/util/route.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/seeders/20180223143244-demo-user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/seeders/20180223143252-demo-tag.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/seeders/20180223143253-demo-post.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/seeders/20180223143315-demo-comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/seeders/20180531145724-user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/seeders/20180226133730-post_tag.js" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -14,66 +40,113 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AccessGroupController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/AccessGroupController.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="access_group.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/access_group.js">
+      <file leaf-file-name="FilmesController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/FilmesController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-25" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="function.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/function.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="605">
+              <caret line="214" selection-start-line="214" selection-end-line="214" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="390">
+                <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/UserController.js">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="loginmd.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/middlewares/loginmd.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="token.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/auth/token.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filme.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/filme.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="32" selection-start-line="32" selection-end-line="32" selection-end-column="46" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="60">
+              <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login_type.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/login_type.js">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="filme.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routes/filme.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/login.js">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="AccessGroupController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/AccessGroupController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="102" column="24" selection-start-line="93" selection-end-line="130" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FunctionController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/FunctionController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/LoginController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>rede-academia</find>
       <find>dbserver</find>
+      <find>ilme</find>
     </findStrings>
     <replaceStrings>
       <replace>locadora</replace>
@@ -92,8 +165,23 @@
         <option value="$PROJECT_DIR$/devops/deploy/ansible-playbook.yaml" />
         <option value="$PROJECT_DIR$/src/config/config.json" />
         <option value="$PROJECT_DIR$/src/environments/environment.dev.js" />
-        <option value="$PROJECT_DIR$/src/models/user.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/models/user_has_filme.js" />
+        <option value="$PROJECT_DIR$/src/seeders/20180531145640-functions.js" />
+        <option value="$PROJECT_DIR$/src/seeders/20180531145700-access_groups.js" />
+        <option value="$PROJECT_DIR$/src/seeders/20180531145723-access_group_has_functions.js" />
+        <option value="$PROJECT_DIR$/src/seeders/20180531145809-logins.js" />
+        <option value="$PROJECT_DIR$/src/seeders/20180531145724-user.js" />
+        <option value="$PROJECT_DIR$/src/seeders/20180622222551-filmes.js" />
+        <option value="$PROJECT_DIR$/src/controllers/AccessGroupController.js" />
+        <option value="$PROJECT_DIR$/src/controllers/FunctionController.js" />
+        <option value="$PROJECT_DIR$/src/controllers/LoginController.js" />
+        <option value="$PROJECT_DIR$/src/controllers/UserController.js" />
+        <option value="$PROJECT_DIR$/src/routes/filme.js" />
+        <option value="$PROJECT_DIR$/src/models/filme.js" />
+        <option value="$PROJECT_DIR$/src/models/user.js" />
+        <option value="$PROJECT_DIR$/src/controllers/FilmesController.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -119,9 +207,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2327" />
-    <option name="width" value="959" />
-    <option name="height" value="1053" />
+    <option name="x" value="1366" />
+    <option name="y" value="-1" />
+    <option name="width" value="1920" />
+    <option name="height" value="1054" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -157,7 +246,38 @@
               <item name="LocadoraOnline" type="b2602c69:ProjectViewProjectNode" />
               <item name="LocadoraOnline" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LocadoraOnline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LocadoraOnline" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="middlewares" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LocadoraOnline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LocadoraOnline" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LocadoraOnline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LocadoraOnline" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LocadoraOnline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LocadoraOnline" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LocadoraOnline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LocadoraOnline" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -171,6 +291,12 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/seeders" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -210,12 +336,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529621930989</updated>
-      <workItem from="1529621933766" duration="3674000" />
+      <workItem from="1529621933766" duration="12014000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3674000" />
+    <option name="totallyTimeSpent" value="12014000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-1" width="1920" height="1054" extended-state="6" />
@@ -223,10 +349,10 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24534501" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24451755" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info id="npm" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3399123" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.21820176" />
       <window_info id="Gulp" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25250396" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -273,14 +399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/environments/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -312,50 +430,177 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/middlewares/loginmd.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/migrations/20180222203644-users.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/orm.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/UserController.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/login_type.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/login.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/AccessGroupController.js">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/function.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="61" lean-forward="true" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/access_group.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-25" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/function.js">
+    <entry file="file://$PROJECT_DIR$/src/models/access_group_has_function.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        <state>
+          <caret selection-end-line="22" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/models/user_has_filme.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        <state relative-caret-position="450">
+          <caret line="30" column="2" lean-forward="true" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/seeders/20180531145723-access_group_has_functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/seeders/20180531145700-access_groups.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/seeders/20180531145640-functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/seeders/20180531145809-logins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/UserController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/LoginController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/filme.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/seeders/20180531145724-user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/seeders/20180622222551-filmes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/AccessGroupController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="102" column="24" selection-start-line="93" selection-end-line="130" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/FunctionController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/filme.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="32" selection-start-line="32" selection-end-line="32" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/auth/token.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/middlewares/loginmd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/FilmesController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="214" selection-start-line="214" selection-end-line="214" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="390">
+            <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

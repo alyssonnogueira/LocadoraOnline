@@ -1,26 +1,19 @@
 const Sequelize = require('sequelize');
 const orm = require('./orm');
-const Login = require('./login').model;
-const AccessGroup = require('./access_group').model;
-const Filme = require('./filme').model;
 
-const User = orm.define('user', {
+const Filme = orm.define('filme', {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true
     },
-    first_name: {
+    titulo: {
         type: Sequelize.STRING
     },
-    last_name: {
+    diretor: {
         type: Sequelize.STRING
     },
-    profile: {
-        type: Sequelize.STRING,
-        allowNull: true
-    },
-    canSignin: {
+    locado: {
         type: Sequelize.BOOLEAN,
         allowNull: false,
         defaultValue: false
@@ -37,18 +30,16 @@ const User = orm.define('user', {
     },
 });
 
-User.hasOne(Login);
-User.belongsTo(AccessGroup, {foreignKey: 'accessGroupId'});
-User.hasMany(Filme);
+Filme.hasMany(Filme, {foreignKey: 'filmeId'});
 
 module.exports = {
-    model: User,
+    model: Filme,
 
     search: (text) =>{
-        return User.all({
+        return Filme.all({
             where: {
                 $or: [
-                    { 'name': { like: text + '%' } },
+                    { 'titulo': { like: text + '%' } },
                 ]
             },
             order: [

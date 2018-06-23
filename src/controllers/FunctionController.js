@@ -1,7 +1,7 @@
 const Function = require('../models/function');
 
 exports.index = function(req, res) {
-    res.send('NOT IMPLEMENTED: Function Index');
+    res.status(200).send('Running..');
 };
 
 exports.create = function (req, res) {

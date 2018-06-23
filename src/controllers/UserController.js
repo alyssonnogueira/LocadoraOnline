@@ -7,7 +7,7 @@ const AccessGroup = require('../models/access_group');
 const AccessGroupHasFunction = require('../models/access_group_has_function');
 
 exports.index = function(req, res) {
-    res.send('NOT IMPLEMENTED: Login Index');
+    res.status(200).send('Running..');
 };
 
 exports.get_user = function(req, res) {
