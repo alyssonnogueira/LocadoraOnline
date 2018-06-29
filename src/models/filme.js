@@ -39,11 +39,11 @@ module.exports = {
         return Filme.all({
             where: {
                 $or: [
-                    { 'titulo': { like: text + '%' } },
+                    { 'titulo': { like: '%' + text + '%' } },
                 ]
             },
             order: [
-                ['name', 'DESC']
+                ['titulo', 'DESC']
             ]
         })
     }

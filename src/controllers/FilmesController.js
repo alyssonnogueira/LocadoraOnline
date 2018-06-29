@@ -6,7 +6,7 @@ exports.index = function(req, res) {
 };
 
 exports.get = function(req, res) {
-    console.log(req.query);
+
     if(!req.query.id)
         return res.status(500).json({
             success: false,
@@ -20,8 +20,7 @@ exports.get = function(req, res) {
         include: [
             {model: Filme.model, required: true},
         ]
-    }).then(filme => {
-        //console.log(filme);
+    }).then(filme => {;
         return res.status(200).json({
             success: true,
             filme: filme,
@@ -30,7 +29,7 @@ exports.get = function(req, res) {
 };
 
 exports.create = function (req, res) {
-    console.log(req.body);
+
     const filme = req.body.filme;
     console.log(filme);
 
@@ -45,12 +44,10 @@ exports.create = function (req, res) {
 };
 
 exports.getAll = function(req, res) {
-    console.log(req.query);
 
     Filme.model.findAll({
         include: [{
             model: Filme.model,
-            as: 'filme',
         }]
     }).then(
         filmes => {
@@ -68,7 +65,7 @@ exports.getAll = function(req, res) {
 };
 
 exports.update = function (req, res) {
-    console.log(req.body);
+
     const filme = req.body.filme;
 
     Filme.model.findById(filme.id).then(filmeDB => {
@@ -97,7 +94,7 @@ exports.update = function (req, res) {
 };
 
 exports.remove = async function (req, res) {
-    console.log(req.query);
+
     const filmeId = parseInt(req.query.userId);
 
     Filme.model.findById(filmeId).then(async filme => {
@@ -115,16 +112,16 @@ exports.remove = async function (req, res) {
     }).catch(err => {
         return res.status(500).json({
             success: false,
-            message: "Find"+err.message
+            message: "Find" + err.message
         })
     });
-
+};
 
 exports.searchFilme = function(req, res) {
-    console.log(req.query);
+
     const titulo = req.query.titulo;
 
-    Filme.model.search(titulo).then(filmes => {
+    Filme.search(titulo).then(filmes => {
             return res.status(200).json({
                 success: true,
                 filmes: filmes
@@ -141,85 +138,82 @@ exports.searchFilme = function(req, res) {
 };
 
 exports.rent = async function(req, res) {
-    console.log(req.body);
-    const filmeId = req.body.filmeId;
-    const userId = this.req.session.id;
 
-    const filmeLivre = freeFilmes(filmeId);
+    const filmeId = req.query.filmeId;
+    const userId = res.locals.session.id;
+
+    const filmeLivre = await freeFilmes(filmeId);
     if (filmeLivre == null)
         return res.status(200).json({
             success: false,
             message: "Não existem mais filmes livres"
         });
 
-    User.model.findById(userId).then(user => {
-        user.addFilmes(filme).then(result => {
+    const user = await User.model.findById(userId);
+    user.addFilmes(filmeLivre).then(result => {
             return res.status(200).json({
                 success: true,
                 result: result,
                 message: "Filme Locado com sucesso"
             })
         }).catch(err => {
+             filmeLivre.locado = false;
+             filmeLivre.save();
             return res.status(500).json({
                 success: true,
                 message: "Internal server error",
                 stack: err
             })
-        })
-    });
+        });
 };
 
 exports.return = async function(req, res) {
     console.log(req.body);
-    const filmeId = req.body.filmeId;
-    const userId = this.req.session.id;
+    const filmeId = req.query.filmeId;
+    const userId = res.locals.session.id;
 
-    const filmes = await Filme.model.findAll({
+    const filme = await Filme.model.findOne({
         where: [
             {id : filmeId},
             {userId: userId}
         ]
     });
 
-    await filmes.forEach(async filme => {
-            filme.locado = false;
-            filme.userId = null;
-            filme.save();
+    filme.locado = false;
+    filme.userId = null;
+    filme.save().then(() => {
+        return res.status(200).json({
+            success: true,
+            message: "Filme devolvido com sucesso"
         });
-
-    return res.status(200).json({
-        success: true,
-        message: "Filme devolvido com sucesso"
     })
-
-
+        .catch(err => {
+            return res.status(500).json({
+                success: true,
+                message: "Internal server error",
+                stack: err
+            });
+        });
 };
 
 freeFilmes = async function(id){
-    const filme = await Filme.model.findById({
-        where: {id : id},
-        include: [
-            {model: Filme.model, required: true},
-        ]
-    });
+    const filme = await Filme.model.findById(id);
 
     if (!filme.locado){
         filme.locado = true;
         await filme.save();
         return filme;
     } else {
-        const freeFilme = filme.filmes.some(filme => {
+        const freeFilme = (await filme.getFilmes()).some(filme => {
             if (!filme.locado)
                 return true;
         });
 
-        if (freeFilme == null)
+        if (freeFilme === false)
             return null;
 
         freeFilme.locado = true;
         freeFilme.save();
         return freeFilme;
     }
-}
-
 };

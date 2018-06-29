@@ -6,7 +6,7 @@ module.exports = {
         host: 'localhost',
         user: 'root',
         password: 'root',
-        database: 'imperium',
+        database: 'locadora',
         port: 3306
     },
     jwt: {

@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "d09af0cd-3e13-421c-a902-f95a7cf5345c",
+		"name": "LocadoraOnline",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Teste Login Online",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/login/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste Nova Conta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user\": {\n\t\"first_name\": \"Usuario\",\n\t\"last_name\": \"Cliente\"\n\t},\n \"login\": {\n \t\"email\": \"usuario@locadora.com\",\n \t\"password\": \"user\"\n }\t\t\n}"
+				},
+				"url": {
+					"raw": "{{url}}/login/new_account",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login",
+						"new_account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste SignIn",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"email\": \"usuario@locadora.com\",\n\t\"password\": \"user\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/login/signin",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste Listar Todos os Filmes",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZmlyc3RfbmFtZSI6IlVzdWFyaW8iLCJsYXN0X25hbWUiOiJDbGllbnRlIiwiaWF0IjoxNTI5Nzg0MzM2fQ.N9ouYKQ60AOEj-1UIZbfYNlk9XzhsW7m1-4Q9jevl1Y",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZmlyc3RfbmFtZSI6IlVzdWFyaW8iLCJsYXN0X25hbWUiOiJDbGllbnRlIiwiaWF0IjoxNTI5Nzg0MzM2fQ.N9ouYKQ60AOEj-1UIZbfYNlk9XzhsW7m1-4Q9jevl1Y"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/filme/get_all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"filme",
+						"get_all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste Aluga Filme",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZmlyc3RfbmFtZSI6IlVzdWFyaW8iLCJsYXN0X25hbWUiOiJDbGllbnRlIiwiaWF0IjoxNTI5Nzg0MzM2fQ.N9ouYKQ60AOEj-1UIZbfYNlk9XzhsW7m1-4Q9jevl1Y"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/filme/rent?filmeId=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"filme",
+						"rent"
+					],
+					"query": [
+						{
+							"key": "filmeId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste Aluga Filme",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZmlyc3RfbmFtZSI6IlVzdWFyaW8iLCJsYXN0X25hbWUiOiJDbGllbnRlIiwiaWF0IjoxNTI5Nzg0MzM2fQ.N9ouYKQ60AOEj-1UIZbfYNlk9XzhsW7m1-4Q9jevl1Y"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/filme/rent?filmeId=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"filme",
+						"rent"
+					],
+					"query": [
+						{
+							"key": "filmeId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste Pesquisa Filme",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZmlyc3RfbmFtZSI6IlVzdWFyaW8iLCJsYXN0X25hbWUiOiJDbGllbnRlIiwiaWF0IjoxNTI5Nzg0MzM2fQ.N9ouYKQ60AOEj-1UIZbfYNlk9XzhsW7m1-4Q9jevl1Y"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/filme/search?titulo=senhor",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"filme",
+						"search"
+					],
+					"query": [
+						{
+							"key": "titulo",
+							"value": "senhor"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste Devolução de Filme",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZmlyc3RfbmFtZSI6IlVzdWFyaW8iLCJsYXN0X25hbWUiOiJDbGllbnRlIiwiaWF0IjoxNTI5Nzg0MzM2fQ.N9ouYKQ60AOEj-1UIZbfYNlk9XzhsW7m1-4Q9jevl1Y"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/filme/return?filmeId=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"filme",
+						"return"
+					],
+					"query": [
+						{
+							"key": "filmeId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

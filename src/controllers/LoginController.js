@@ -7,7 +7,7 @@ const User = require('../models/user');
 "use strict";
 
 exports.index = function(req, res) {
-    res.status(200).send('Running..');
+    res.status(200).json({success: true, message: 'Running..'});
 };
 
 exports.signin = function(req, res) {
@@ -107,8 +107,9 @@ exports.new_account = function(req, res) {
         }
     }).then(userLogin => {
         if (!userLogin) {
-            newUser.accessGroupId = 1;
+            newUser.accessGroupId = 2;
             newUser.profile = null;
+            newUser.canSignin = true;
             User.model.create(newUser).then(user => {
                 if(newLogin.password !== "") {
                     var salt = bcrypt.genSaltSync(saltRounds);

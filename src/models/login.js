@@ -3,7 +3,6 @@ const Op = Sequelize.Op;
 const orm = require('./orm');
 const moment = require('moment');
 const _ = require('lodash');
-const User = require('./user').model;
 
 const Login = orm.define('login', {
     id: {
@@ -29,9 +28,6 @@ const Login = orm.define('login', {
         allowNull: false
     },
 });
-
-// Login.belongsTo(User);
-// Login.belongsTo(LoginType);
 
 module.exports = {
     model: Login
